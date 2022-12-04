@@ -23,7 +23,7 @@ public class InternetPayment extends Service {
         return p;
     }
     public Payment setinternetByCash() {
-        p=new CashPayment();
+        CashPayment p=new CashPayment();
         setPayment(p);
         return p;
     }
