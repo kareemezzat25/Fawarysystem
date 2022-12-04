@@ -15,17 +15,17 @@ public class Mobilerecharge extends Service {
     public Vector<String> getProviders(){
         return providers;
     }
-    public Payment setMobilerecharge(String s/*,provider p*/) {
-        if(s=="Creditcard") {
+     public Payment setMobilerechargeByCard(String s,double amount) {
 
-            p=setPayment(new CreditCardPayment());
-        }
-        else if(s=="cash") {
-            p=setPayment(new CashPayment());
-        }
+
+        CreditCardPayment p=new CreditCardPayment(amount,s);
+        setPayment(p);
         return p;
-
-
+    }
+    public Payment setMobilerechargeByCash() {
+        p=new CashPayment();
+        setPayment(p);
+        return p;
     }
 
 
