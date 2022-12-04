@@ -23,7 +23,7 @@ public class Mobilerecharge extends Service {
         return p;
     }
     public Payment setMobilerechargeByCash() {
-        p=new CashPayment();
+        CashPayment p=new CashPayment();
         setPayment(p);
         return p;
     }
