@@ -24,7 +24,7 @@ public class Donations extends Service{
             return p;
     }
     public Payment setDonationsByCash() {
-        p=new CashPayment();
+      CashPayment p=new CashPayment();
         setPayment(p);
         return p;
     }
