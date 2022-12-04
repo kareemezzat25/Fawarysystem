@@ -15,17 +15,17 @@ public class InternetPayment extends Service {
     public Vector<String> getProviders(){
         return providers;
     }
-    public Payment setInternetPayment(String s/*,provider p*/) {
-        if(Objects.equals(s, "Creditcard")) {
+    public Payment setinternetByCard(String s,double amount) {
 
-            p=setPayment(new CreditCardPayment());
-        }
-        else if(Objects.equals(s, "cash")) {
-            p=setPayment(new CashPayment());
-        }
+
+        CreditCardPayment p=new CreditCardPayment(amount,s);
+        setPayment(p);
         return p;
-
-
+    }
+    public Payment setinternetByCash() {
+        p=new CashPayment();
+        setPayment(p);
+        return p;
     }
 
 
