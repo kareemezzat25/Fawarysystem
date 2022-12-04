@@ -17,8 +17,9 @@ public class Landline extends Service {
             System.out.println("invalid name of receipt");
         }
     }
-    public Payment setPayment(){
-        p=setPayment(new CreditCardPayment());
+    public Payment setPayment(String accnum,double amount){
+        CreditCardPayment p=new CreditCardPayment(amount,accnum);
+        setPayment(p);
         return p;
     }
 
