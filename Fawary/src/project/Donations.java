@@ -16,17 +16,17 @@ public class Donations extends Service{
     public void getDonations(){
         map.forEach((key, value) -> System.out.println(key + " " + value));
     }
-    public Payment setDonations(String s) {
-        if(s=="Creditcard") {
+    public Payment setDonationsByCard(String s,double amount) {
 
-            p=setPayment(new CreditCardPayment());
-        }
-        else if(s=="cash") {
-            p=setPayment(new CashPayment());
-        }
+
+            CreditCardPayment p=new CreditCardPayment(amount,s);
+            setPayment(p);
+            return p;
+    }
+    public Payment setDonationsByCash() {
+        p=new CashPayment();
+        setPayment(p);
         return p;
-
-
     }
 
 }
