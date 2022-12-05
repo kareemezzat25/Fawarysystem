@@ -1,15 +1,16 @@
 package project;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
-public class Authentication {
-	
+public class Authentication  {
+	Scanner input=new Scanner(System.in);
 	String Username;
 	String email;
 	String password;
 	public ArrayList<Useremail>users=new ArrayList<Useremail>();
 	
-	void signup(String Username,String email,String password)
+	public void signup(String Username,String email,String password)
 	{
 		this.Username=Username;
 		this.email=email;
@@ -22,8 +23,10 @@ public class Authentication {
 			System.out.println("your register has complete successfully");
 		}
 	}
-	void signin(String email,String password)
+	
+	public void signin(String email,String password)
 	{
+		
 		this.email=email;
 		this.password=password;
 		if(checksignin()==0)
@@ -36,7 +39,7 @@ public class Authentication {
 	{
 		for(int i=0;i<users.size();i++)
 		{
-			if(Username==users.get(i).username||email==users.get(i).email)
+			if(Username.equals(users.get(i).username)||email.equals(users.get(i).email))
 				return 0;
 		}
 		return 1;
@@ -46,7 +49,7 @@ public class Authentication {
 	{
 		for(int i=0;i<users.size();i++)
 		{
-			if(email==users.get(i).email&&Username==users.get(i).username)
+			if(email.equals(users.get(i).email)&&password.equals(users.get(i).password))
 				return 0;
 		}
 		return 1;

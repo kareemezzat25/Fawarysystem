@@ -8,14 +8,14 @@ public class UserAccount {
 	private Useremail useremail;
 	public static int id=1;
 	
-	void maketransction(Authentication authentication)
+	void maketransction()
 	{
 		
 		System.out.println("Enter paidprice");
 		double price=input.nextDouble();
 		System.out.println("Enter True if exist any discount and False if not");
 		boolean isDiscount=input.nextBoolean();
-		String todaydate=new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+		String todaydate=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
 		listTransaction.add(new Transaction(id,todaydate,price,isDiscount));
 		id++;
 	}

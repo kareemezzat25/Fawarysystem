@@ -4,7 +4,6 @@ import java.time.LocalDateTime;
 
 public class Transaction {
 	int id;
-	//LocalDateTime  date;
 	String date;
 	double paidPrice;
 	boolean isDiscount;

@@ -4,11 +4,7 @@ public class Useremail {
 	String username;
 	String email;
 	String password;
-	/*public Useremail(String username)
-		{
-			this.username=this.name;
-		}
-		*/
+	
 	public Useremail(String username,String email,String password)
 	{
 		this.username=username;
