@@ -3,12 +3,15 @@ package project;
 import java.time.LocalDateTime;
 
 public class Transaction {
+	
+	String nameuser;
 	int id;
 	String date;
 	double paidPrice;
 	boolean isDiscount;
-	public Transaction(int id,String date,double paidPrice,boolean isDiscount)
+	public Transaction(String nameuser,int id,String date,double paidPrice,boolean isDiscount)
 	{
+		this.nameuser=nameuser;
 		this.id=id;
 		this.date=date;
 		this.paidPrice=paidPrice;

@@ -1,4 +1,4 @@
-package SW;
+package project;
 
 public class CreditCardPayment implements Payment{
     private String creditcardnum;
@@ -11,24 +11,21 @@ public class CreditCardPayment implements Payment{
     public double payfromWallet(double amount){
         double x;
         x=wallet-amount;
+        System.out.println("pay from Wallet");
         return x;
     }
-    public void setCreditCardPayment(double amount,String creditcardnum) {
+    public CreditCardPayment(double amount,String creditcardnum) {
         this.amount=amount;
         this.creditcardnum=creditcardnum;
     }
-    @Override
     public double getAmount() {
         return amount;
     }
 
-    @Override
     public void setAmount(double amount) {
         this.amount=amount;
 
     }
-
-    @Override
 
     public void paymentDetails () {
         System.out.println("the payment amount="+this.amount);
@@ -37,4 +34,5 @@ public class CreditCardPayment implements Payment{
     }
 
 }
+
 

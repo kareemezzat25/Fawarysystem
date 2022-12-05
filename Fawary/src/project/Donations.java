@@ -1,4 +1,4 @@
-package SW;
+package project;
 import java.util.HashMap;
 import java.util.Map;
 public class Donations extends Service{
@@ -14,7 +14,8 @@ public class Donations extends Service{
         map.put(s,d);
     }
     public void getDonations(){
-        map.forEach((key, value) -> System.out.println(key + " " + value));
+        //map.forEach((key, value) -> System.out.println(key + " " + value));
+    System.out.println(map);
     }
     public Payment setDonationsByCard(String s,double amount) {
 
@@ -24,9 +25,14 @@ public class Donations extends Service{
             return p;
     }
     public Payment setDonationsByCash() {
-      CashPayment p=new CashPayment();
+        CashPayment p=new CashPayment();
         setPayment(p);
         return p;
     }
+    public  void Pay(double amount,Payment p){
+        p.setAmount(amount);
+        p.paymentDetails();
+    }
+
 
 }

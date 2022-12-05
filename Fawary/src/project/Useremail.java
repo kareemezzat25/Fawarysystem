@@ -4,9 +4,11 @@ public class Useremail {
 	String username;
 	String email;
 	String password;
+	String type;
 	
-	public Useremail(String username,String email,String password)
+	public Useremail(String type,String username,String email,String password)
 	{
+		this.type=type;
 		this.username=username;
 		this.email=email;
 		this.password=password;
